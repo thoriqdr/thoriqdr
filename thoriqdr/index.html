@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thoriq Dwi Rayoga - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header dengan Foto -->
+    <header class="profile-header">
+        <img src="foto-profil.jpg" alt="Foto Thoriq Dwi Rayoga" class="profile-image">
+        <div class="profile-text">
+            <h1>Thoriq Dwi Rayoga</h1>
+            <p>Mahasiswa & Freelancer</p>
+        </div>
+    </header>
+
+    <!-- Info Kontak -->
+    <section class="contact-info">
+        <div class="contact-item">
+            <i class="fas fa-envelope"></i>
+            <span>thoriqdra@gmail.com</span>
+        </div>
+        <div class="contact-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <span>Klojen, Kota Malang, Jawa Timur</span>
+        </div>
+    </section>
+
+    <!-- Social Media Scroll -->
+    <div class="social-scroll">
+        <a href="https://instagram.com/thorigdr" class="social-card">
+            <i class="fab fa-instagram social-icon"></i>
+            <span>@thoriqdr</span>
+        </a>
+        <a href="https://tiktok.com/@thorigdr" class="social-card">
+            <i class="fab fa-tiktok social-icon"></i>
+            <span>@thoriqdr</span>
+        </a>
+        <a href="https://linkedin.com/in/thoriq-dwi-rayoga" class="social-card">
+            <i class="fab fa-linkedin social-icon"></i>
+            <span>Thoriq Dwi Rayoga</span>
+        </a>
+        <a href="mailto:thoriqdra@gmail.com" class="social-card">
+            <i class="fas fa-envelope social-icon"></i>
+            <span>Email Saya</span>
+        </a>
+    </div>
+
+    <!-- Tentang Saya -->
+    <section class="section visible">
+        <h2 class="section-title">Tentang Saya</h2>
+        <p>Lulusan SMAN 1 Bunguran Timur dengan pengalaman sebagai konten kreator dan freelancer di berbagai platform. Saat ini sedang menempuh pendidikan di Universitas Brawijaya sambil mengembangkan berbagai skill profesional.</p>
+    </section>
+
+    <!-- Keahlian -->
+    <section class="section visible">
+        <h2 class="section-title">Keahlian</h2>
+        <div class="skills-grid">
+            <div class="skill-item">Digital Marketing</div>
+            <div class="skill-item">Desain Grafis</div>
+            <div class="skill-item">Editing Video</div>
+            <div class="skill-item">Manajemen Konten</div>
+            <div class="skill-item">Bisnis Online</div>
+            <div class="skill-item">Teknologi</div>
+        </div>
+    </section>
+
+    <!-- Pendidikan -->
+    <section class="section visible">
+        <h2 class="section-title">Pendidikan</h2>
+        <div class="timeline-item">
+            <div class="timeline-date">2024 - Sekarang</div>
+            <h3 class="timeline-title">Universitas Brawijaya</h3>
+            <p class="timeline-description">Mahasiswa aktif program studi Ilmu Komputer</p>
+        </div>
+        <div class="timeline-item">
+            <div class="timeline-date">2020 - 2023</div>
+            <h3 class="timeline-title">SMAN 1 Bunguran Timur</h3>
+            <p class="timeline-description">Aktif di kegiatan ekstrakurikuler marching band dan pengembangan konten kreatif</p>
+        </div>
+    </section>
+
+    <script>
+        // Scroll Animation
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if(entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.section').forEach((section) => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
